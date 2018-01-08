@@ -11,7 +11,7 @@ The goals / steps of this project are the following:
 
 ---
 
-### Reflection
+## Reflection
 
 ### 1. The image processing pipeline
 
@@ -40,7 +40,7 @@ The lines are then drawn into the edge image. Because usually many lines are det
 only the ones that are relevant. This is done by masking the resulting image with a polygon that is placed on the image
 area where lane markings are expected.
 
-The result of the line detection looks like this:
+The result of the line detection looks like this. The detected lines are drawn in red.
 
 ![](./examples/generated/2_solidYellowLeft.jpg)
 
@@ -53,9 +53,10 @@ I decided to cluster all detected lines in the image by their slope.
 For the clustering I decided to use the DBSCAN algorithm, which I implemented by my own.
 
 After the clustering each line cluster is classified to be either a left or a right lane marking cluster.
-This can be easily done by evaluating the average slope of each cluster: 
-slope ≤ 0 means left lane marking cluster.
-slope > 0 means right lane marking cluster.
+This can be easily done by evaluating the average slope of each cluster:
+
+* Slope ≤ 0 means left lane marking cluster.
+* Slope > 0 means right lane marking cluster.
 
 Finally linear regression (numpy.polyfit) is used to create one single line per lane marking cluster.
 The resulting linear functions are then used to draw the line annotations into the image.
@@ -65,7 +66,7 @@ could have more than one cluster. To handle this case only the largest cluster (
 from each cluster class are used for the linear regression. 
 
 
-The result of the lane detection looks like this:
+The result of the lane detection looks like this. The lane lines are drawn in yellow.
 
 ![](./examples/generated/3_solidYellowLeft.jpg)
 
