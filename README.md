@@ -1,6 +1,6 @@
 # Finding Lane Lines on the Road
 
-This project uses Canny Edge Detection, Hough Transforms, DBSCAN and linear regression to identify and mark lane lines on a road.
+This project uses canny edge detection, hough transforms, DBSCAN and linear regression to detect lane marking lines on a road and annotate them in the image.
 
 A detailed description about the used approach can be found [here](writeup.md).
 
