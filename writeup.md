@@ -7,7 +7,7 @@ The goals / steps of this project are the following:
 
 
 
-![]:(./test_images_output/solidWhiteCurve.jpg)
+![](./test_images/solidYellowLeft.jpg)
 
 ---
 
@@ -28,6 +28,8 @@ Afterwards edgedes are detected by using the canny detector from OpenCV.
 
 The result of the edge detection looks like this:
 
+![](./examples/generated/1_solidYellowLeft.jpg)
+
 
 #### Line detection
 
@@ -39,6 +41,8 @@ only the ones that are relevant. This is done by masking the resulting image wit
 area where lane markings are expected.
 
 The result of the line detection looks like this:
+
+![](./examples/generated/2_solidYellowLeft.jpg)
 
 
 #### Lane detection
@@ -61,7 +65,9 @@ could have more than one cluster. To handle this case only the largest cluster (
 from each cluster class are used for the linear regression. 
 
 
-![bala][./test_images/solidWhiteCurve.jpg]
+The result of the lane detection looks like this:
+
+![](./examples/generated/3_solidYellowLeft.jpg)
 
 
 ### 2. Potential shortcomings
