@@ -6,9 +6,8 @@ The goals / steps of this project are the following:
 * Reflect on your work in a written report
 
 
-[//]: # (Image References)
 
-[image1]: ./test_images_output/whiteCarLaneSwitch.jpg "Grayscale"
+![]:(./test_images_output/solidWhiteCurve.jpg)
 
 ---
 
@@ -22,7 +21,7 @@ The image processing pipeline consists of 3 major steps.
 * Line detection
 * Lane detection
 
-1. Edge detection
+#### Edge detection
 
 In order to detect edges the image is first converted into grayscale and filtered by a gaussian blur.
 Afterwards edgedes are detected by using the canny detector from OpenCV.
@@ -30,7 +29,7 @@ Afterwards edgedes are detected by using the canny detector from OpenCV.
 The result of the edge detection looks like this:
 
 
-2. Line detection
+#### Line detection
 
 In this step a Hough transformation is applied to the output image of the previous step.
 The Hough transformation detects straight lines in the image. Each line is represented as a tuple of points.
@@ -42,7 +41,7 @@ area where lane markings are expected.
 The result of the line detection looks like this:
 
 
-3. Lane detection
+#### Lane detection
 
 Even with the masking filter described above many detected lines remain in the image.
 Assuming that lines on a single lane marking will most likely have a similar slope,
